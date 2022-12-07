@@ -1,0 +1,24 @@
+.register__page {
+  flex: 1;
+  padding-top: 56px;
+  &-container {
+    max-width: 313px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .title {
+    font-size: 20px;
+    margin-bottom: 2rem;
+  }
+  .register__btn {
+    margin-top: 56px;
+    margin-bottom: 40px;
+  }
+  .register__timer {
+    font-weight: 700;
+  }
+  .register__resend-code {
+    color: #a2a2a2;
+    text-decoration: underline;
+  }
+}

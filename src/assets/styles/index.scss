@@ -1,0 +1,17 @@
+@import './basics/fonts';
+@import './basics/variables';
+@import './basics/mixins';
+@import './basics/generals';
+
+// Layout
+@import './layouts/headerLayout';
+
+// Pages
+@import './pages/loginPage';
+@import './pages/registerPage';
+
+// Components
+@import './components/generals/headerTitle';
+@import './components/generals/steps';
+@import './components/verificationPhone/phoneNumber';
+@import './components/verificationPhone/codeSMS';

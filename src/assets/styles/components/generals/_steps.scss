@@ -1,0 +1,44 @@
+.steps__container {
+  height: 127px;
+  background-color: #eff5f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .step__component {
+    max-width: 546px;
+    width: 100%;
+  }
+  .step__line {
+    border-width: 2px;
+    border-color: transparentize($colorBlue, 0.9);
+  }
+  .step__completed {
+    .step__line {
+      border-color: $colorBlue;
+    }
+  }
+  .step__item {
+    width: 32px;
+    height: 32px;
+    background-color: transparentize($colorBlue, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    p {
+      color: $colorBlack;
+    }
+    &.completed {
+      background-color: $colorBlue;
+      p {
+        color: $colorWhite;
+      }
+    }
+  }
+  .step__label {
+    font-weight: 500;
+    &.completed {
+      font-weight: 700;
+    }
+  }
+}
