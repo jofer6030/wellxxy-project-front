@@ -5,7 +5,7 @@ import { BsPhone } from 'react-icons/bs';
 import FacebookIcon from '../components/Icons/FacebookIcon';
 import Logo from '../components/Icons/Logo';
 import BtnGoogle from '../components/generals/BtnGoogle';
-import { googleLogout } from '@react-oauth/google';
+import BtnFacebook from '../components/generals/BtnFacebook';
 
 const LoginPage: FC = () => {
   return (
@@ -23,13 +23,7 @@ const LoginPage: FC = () => {
             <BtnGoogle />
           </Grid>
           <Grid item xs={12} lg={6}>
-            <Button
-              fullWidth
-              variant='outlined'
-              startIcon={<FacebookIcon className='btn__icon' />}
-            >
-              Ingresa con Facebook
-            </Button>
+            <BtnFacebook />
           </Grid>
         </Grid>
         <Button fullWidth startIcon={<BsPhone />} variant='contained-primary'>

@@ -18,6 +18,7 @@
     "axios": "^1.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-facebook-login": "^4.1.1",
     "react-icons": "4.7.1",
     "react-redux": "^8.0.5",
     "react-router-dom": "6.4.4",
@@ -26,9 +27,11 @@
   "devDependencies": {
     "@types/react": "18.0.24",
     "@types/react-dom": "18.0.8",
+    "@types/react-facebook-login": "^4.1.5",
     "@vitejs/plugin-react": "2.2.0",
     "sass": "1.56.1",
     "typescript": "4.6.4",
-    "vite": "3.2.3"
+    "vite": "3.2.3",
+    "vite-plugin-mkcert": "^1.10.1"
   }
 }
