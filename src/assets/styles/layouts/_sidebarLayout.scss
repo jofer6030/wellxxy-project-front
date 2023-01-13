@@ -1,0 +1,89 @@
+.sidebar__layout {
+  height: 100vh;
+  overflow: hidden;
+  .sidebar__layout-nav {
+    width: 231px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 24px 78px;
+    .nav__logo-container {
+      padding-left: 16px;
+      margin-bottom: 54px;
+      .nav__logo {
+        width: 81px;
+      }
+    }
+    .nav__items {
+      flex: 1;
+      .nav__link {
+        text-decoration: none;
+        .MuiListItem-root {
+          gap: 12px;
+          align-items: center;
+          font-weight: 400;
+          padding: 17px;
+          border-radius: 4px;
+          margin-bottom: 12px;
+          color: transparentize($colorBlack, 0.1);
+          svg {
+            fill: transparentize($colorBlack, 0.1);
+          }
+          .MuiListItemIcon-root {
+            min-width: auto;
+          }
+        }
+        &.active {
+          .MuiListItem-root {
+            background-color: $colorBlue;
+            color: $colorWhite;
+            svg {
+              fill: $colorWhite;
+            }
+          }
+        }
+      }
+    }
+    .nav__perfil-container {
+      background-color: transparentize($colorBlue, 0.9);
+      border-radius: 4px;
+      padding: 8px;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+      .nav__perfil-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid $colorWhite;
+      }
+      .nav__perfil-info {
+        font-size: 12px;
+        font-weight: 600;
+        span {
+          display: block;
+          font-weight: 400;
+          color: transparentize($colorBlack, 0.4);
+        }
+      }
+    }
+    .nav__logout {
+      font-size: 16px;
+      padding: 15px 0 15px 51px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &:hover {
+        cursor: pointer;
+        background-color: transparentize($colorBlack, 0.97);
+      }
+    }
+  }
+  .sidebar__layout-content {
+    flex: 1;
+    height: 100%;
+    background-color: transparentize($colorBlue, 0.95);
+    padding: 58px 64px 41px 32px;
+    overflow-y: scroll;
+  }
+}

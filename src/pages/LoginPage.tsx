@@ -1,12 +1,10 @@
 import { FC } from 'react';
-import { Button, Grid, Typography } from '@mui/material';
-import { BsPhone } from 'react-icons/bs';
+import { Grid, Typography } from '@mui/material';
 
-import FacebookIcon from '../components/Icons/FacebookIcon';
 import Logo from '../components/Icons/Logo';
 import BtnGoogle from '../components/generals/BtnGoogle';
 import BtnFacebook from '../components/generals/BtnFacebook';
-
+import BtnPhone from '../components/generals/BtnPhone';
 const LoginPage: FC = () => {
   return (
     <Grid container className='login__page-container'>
@@ -26,9 +24,7 @@ const LoginPage: FC = () => {
             <BtnFacebook />
           </Grid>
         </Grid>
-        <Button fullWidth startIcon={<BsPhone />} variant='contained-primary'>
-          Ingresar con número de celular
-        </Button>
+        <BtnPhone />
       </Grid>
       <Grid item className='login__img' xs={0} md={6} />
     </Grid>

@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import stepReducer from './reducers/stepReducer';
+import authReducer from './reducers/authReducer';
 
 const store = configureStore({
   reducer: {
     Steps: stepReducer,
+    Auth: authReducer,
   },
 });
 

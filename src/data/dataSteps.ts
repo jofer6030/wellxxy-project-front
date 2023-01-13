@@ -1,1 +1,1 @@
-export const dataStepsVerification = ['Elegir número', 'Verificarcódigo'];
+export const dataStepsVerification = ['Elegir número', 'Verificar código'];

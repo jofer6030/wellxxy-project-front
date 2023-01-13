@@ -14,6 +14,9 @@ export const btnContainedSecondary = {
   backgroundColor: '#282828',
   color: '#fff',
   border: 'none',
+  padding: '16px 0px',
+  fontSize: '18px',
+  borderRadius: '8px',
   ':hover': {
     backgroundColor: '#343434',
     color: '#fff',

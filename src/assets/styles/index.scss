@@ -5,13 +5,18 @@
 
 // Layout
 @import './layouts/headerLayout';
+@import './layouts/sidebarLayout';
 
 // Pages
 @import './pages/loginPage';
 @import './pages/registerPage';
+@import './pages/homePage';
 
 // Components
+@import './components/generals/loading';
 @import './components/generals/headerTitle';
 @import './components/generals/steps';
+@import './components/generals/inputPhoneNumber';
+@import './components/generals/ordersEmpty';
 @import './components/verificationPhone/phoneNumber';
 @import './components/verificationPhone/codeSMS';

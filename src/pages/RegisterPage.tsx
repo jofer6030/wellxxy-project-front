@@ -15,7 +15,7 @@ const RegisterPage = () => {
       return;
     }
     dispatch(resetStep());
-    navigate('/shopping-cart', { replace: true });
+    navigate('/home', { replace: true });
   };
 
   return (

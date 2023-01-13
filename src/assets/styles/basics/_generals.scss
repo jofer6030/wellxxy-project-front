@@ -10,3 +10,24 @@ body {
   font-family: $fontMontserrat;
   font-size: 16px;
 }
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+img {
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  background-color: #bebebe;
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $colorBlackTres;
+  border-radius: 5px;
+}

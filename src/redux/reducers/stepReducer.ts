@@ -6,7 +6,7 @@ interface StepState {
 const localStorageSteps = Number(localStorage.getItem('step'));
 
 const initialState: StepState = {
-  steps: !localStorageSteps ? 1 : localStorageSteps < 1 ? 1 : localStorageSteps,
+  steps: !localStorageSteps ? 1 : Math.max(localStorageSteps, 1),
 };
 
 export const stepSlice = createSlice({
@@ -17,6 +17,10 @@ export const stepSlice = createSlice({
       state.steps = state.steps + 1;
       localStorage.setItem('step', state.steps.toString());
     },
+    backStep: (state) => {
+      state.steps = state.steps - 1;
+      localStorage.setItem('step', state.steps.toString());
+    },
     resetStep: (state) => {
       state.steps = 1;
       localStorage.setItem('step', state.steps.toString());
@@ -24,6 +28,6 @@ export const stepSlice = createSlice({
   },
 });
 
-export const { nextStep, resetStep } = stepSlice.actions;
+export const { nextStep, resetStep, backStep } = stepSlice.actions;
 
 export default stepSlice.reducer;

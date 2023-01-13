@@ -1,0 +1,19 @@
+.phone__number-input {
+  position: relative;
+  input {
+    padding-left: 4.5rem;
+    font-weight: 800;
+  }
+  .phone__number-input__flag {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    span {
+      font-family: $fontAvenir;
+      color: transparentize($colorBlack, 0.5);
+    }
+  }
+}

@@ -1,9 +1,14 @@
-import { FC } from 'react'
-import { Outlet } from 'react-router-dom'
+import { FC } from 'react';
+import { Navigate, Outlet } from 'react-router-dom';
+import { useAppSelector } from '../redux/hooks/reduxHooks';
 
 const PrivateRoutes: FC = () => {
-  console.log("PrivateRoutes");
-  return <Outlet />
-}
+  const { auth } = useAppSelector((state) => state.Auth);
 
-export default PrivateRoutes
+  if (!auth) {
+    return <Navigate to='/login' replace />;
+  }
+  return <Outlet />;
+};
+
+export default PrivateRoutes;

@@ -1,11 +1,6 @@
 import { createTheme } from '@mui/material';
 import { CheckBox, CheckBoxChecked } from '../../components/Icons/CheckBox';
-import {
-  btnContainedPrimary,
-  btnContainedSecondary,
-  btnOutlined,
-  btnText,
-} from './btnTheme';
+import { btnContainedPrimary, btnContainedSecondary, btnOutlined, btnText } from './btnTheme';
 
 export const theme = createTheme({
   palette: {
@@ -22,6 +17,12 @@ export const theme = createTheme({
     },
     h2: {
       fontWeight: '700',
+    },
+    h4: {
+      color: '#070707',
+      fontSize: '24px',
+      fontFamily: 'Avenir',
+      fontWeight: '800',
     },
     allVariants: {
       color: '#282828',
@@ -53,11 +54,11 @@ export const theme = createTheme({
       defaultProps: {
         variant: 'standard',
       },
-      styleOverrides: {
-        root: {
-          height: '56px',
-        },
-      },
+      // styleOverrides: {
+      //   root: {
+      //     height: '56px',
+      //   },
+      // },
     },
     MuiInputBase: {
       styleOverrides: {
@@ -66,7 +67,6 @@ export const theme = createTheme({
           fontWeight: 500,
           color: '#282828',
           fontSize: '16px',
-          flex: 1,
         },
       },
     },
@@ -76,9 +76,9 @@ export const theme = createTheme({
           fontFamily: 'Avenir',
           color: 'rgba(40, 40, 40, 0.5)',
           fontSize: '16px',
-          '&.MuiInputLabel-shrink': {
-            transform: 'translate(0, -1.5px) scale(1)',
-          },
+          // '&.MuiInputLabel-shrink': {
+          //   transform: 'translate(0, -1.5px) scale(1)',
+          // },
         },
       },
     },
@@ -86,6 +86,15 @@ export const theme = createTheme({
       defaultProps: {
         icon: <CheckBox />,
         checkedIcon: <CheckBoxChecked />,
+      },
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          boxShadow: '0px 1px 12px rgba(0, 0, 0, 0.06)',
+          borderRadius: '20px',
+          padding: '24px',
+        },
       },
     },
   },
