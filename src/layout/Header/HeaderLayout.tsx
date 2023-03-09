@@ -1,14 +1,12 @@
 import { Box } from '@mui/material';
 import { Outlet, useLocation } from 'react-router-dom';
 
-import HeaderTitle from '../components/generals/HeaderTitle';
-import Steps from '../components/generals/Steps';
+import HeaderTitle from './HeaderTitle';
+import Steps from './Steps';
 
-import { dataStepsVerification } from '../data/dataSteps';
+import { dataStepsVerification } from '../../data/dataSteps';
 
-interface ITitle {
-  [key: string]: string;
-}
+type ITitle = Record<string, string>;
 
 const HeaderLayout = () => {
   const { pathname } = useLocation();

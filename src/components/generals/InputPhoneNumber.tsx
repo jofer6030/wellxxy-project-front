@@ -10,13 +10,7 @@ interface Props {
   mb?: number;
 }
 
-const InputPhoneNumber = ({
-  value,
-  onChange,
-  name,
-  label = 'Número de celular',
-  mb = 24,
-}: Props) => {
+const InputPhoneNumber = ({ value, onChange, name, label = 'Número de celular', mb = 24 }: Props) => {
   const [activeCode, setActiveCode] = useState(false);
 
   const handleFocus = () => {
@@ -40,7 +34,7 @@ const InputPhoneNumber = ({
         value={value}
         name={name}
       />
-      {activeCode && (
+      {(activeCode || !!value) && (
         <Box className='phone__number-input__flag'>
           <FlagPeruIcon /> <span>+51</span>
         </Box>

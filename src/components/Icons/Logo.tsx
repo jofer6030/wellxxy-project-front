@@ -2,12 +2,7 @@ import { SVGProps } from 'react';
 
 const Logo = (props: SVGProps<SVGSVGElement>) => {
   return (
-    <svg
-      {...props}
-      viewBox='0 0 113 36'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
-    >
+    <svg {...props} viewBox='0 0 113 36' fill='none' xmlns='http://www.w3.org/2000/svg'>
       <path
         d='M11.678 9.30664H15.0508L19.3951 23.1734L23.0794 9.30664H26.5205L21.0981 27.7314H17.727L13.2778 13.7122L8.93352 27.7314H5.49244L0 9.30664H3.58111L7.33375 23.1734L11.678 9.30664Z'
         fill='#5B99BF'

@@ -3,11 +3,12 @@ import { Button } from '@mui/material';
 import { ReactFacebookLoginInfo } from 'react-facebook-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 
-import FacebookIcon from '../Icons/FacebookIcon';
+import FacebookIcon from '../../components/Icons/FacebookIcon';
 import { IUser } from '../../redux/reducers/authReducer';
+import { FC } from 'react';
 
-const BtnFacebook = () => {
-  const responseFacebook = async (response: ReactFacebookLoginInfo) => {
+const BtnFacebook: FC = () => {
+  const responseFacebook = async (response: ReactFacebookLoginInfo): Promise<void> => {
     try {
       const {
         data: { picture, ...rest },

@@ -1,14 +1,6 @@
 import { FC } from 'react';
 import { dataStepsVerification } from '../../data/dataSteps';
-import {
-  Box,
-  Step,
-  StepLabel,
-  Stepper,
-  StepIconProps,
-  Typography,
-  StepConnector,
-} from '@mui/material';
+import { Box, Step, StepLabel, Stepper, StepIconProps, Typography, StepConnector } from '@mui/material';
 import { useAppSelector } from '../../redux/hooks/reduxHooks';
 
 const StepsComponent: FC<StepIconProps> = ({ active, completed, icon }) => {

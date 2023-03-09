@@ -1,4 +1,4 @@
-.register__page {
+.login__mobile__page {
   flex: 1;
   padding-top: 56px;
   &-container {
@@ -10,15 +10,26 @@
     font-size: 20px;
     margin-bottom: 2rem;
   }
-  .register__btn {
+  .login__resend__btn {
     margin-top: 56px;
     margin-bottom: 40px;
   }
-  .register__timer {
+  .login__timer {
     font-weight: 700;
   }
-  .register__resend-code {
+  .login__resend-code {
     color: #a2a2a2;
     text-decoration: underline;
   }
+}
+
+.phone__number {
+  .phone__number-check {
+    .phone__number-link {
+      color: $colorBlue;
+    }
+  }
+}
+
+.code__sms {
 }

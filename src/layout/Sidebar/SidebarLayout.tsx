@@ -1,21 +1,12 @@
-import {
-  Box,
-  Grid,
-  List,
-  ListItem,
-  ListItemIcon,
-  Typography,
-} from '@mui/material';
+import { Box, Grid, List, ListItem, ListItemIcon, Typography } from '@mui/material';
 import { NavLink, Outlet } from 'react-router-dom';
 
-import Logo from '../components/Icons/Logo';
-import HomeIcon from '../components/Icons/HomeIcon';
-import OrderIcon from '../components/Icons/OrderIcon';
-import { linksSidebar } from '../data/sidebarItems';
-import LogoutIcon from '../components/Icons/LogoutIcon';
-import { useAppDispatch } from '../redux/hooks/reduxHooks';
+import Logo from '../../components/Icons/Logo';
+import { linksSidebar } from '../../data/sidebarItems';
+import LogoutIcon from '../../components/Icons/LogoutIcon';
+import { useAppDispatch } from '../../redux/hooks/reduxHooks';
 
-import { logout } from '../redux/reducers/authReducer';
+import { logout } from '../../redux/reducers/authReducer';
 
 const SidebarLayout = () => {
   const dispatch = useAppDispatch();
@@ -28,12 +19,7 @@ const SidebarLayout = () => {
         <Box className='nav__logo-container'>
           <Logo className='nav__logo' />
         </Box>
-        <Grid
-          container
-          className='nav__items'
-          direction='column'
-          justifyContent='space-between'
-        >
+        <Grid container className='nav__items' direction='column' justifyContent='space-between'>
           <Grid item>
             <List>
               {linksSidebar.map(({ to, Icon, text }) => (

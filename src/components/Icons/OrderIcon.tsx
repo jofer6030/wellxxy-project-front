@@ -2,14 +2,7 @@ import { SVGProps } from 'react';
 
 const OrderIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
-    <svg
-      width='24'
-      height='24'
-      viewBox='0 0 24 24'
-      xmlns='http://www.w3.org/2000/svg'
-      fill='#282828'
-      {...props}
-    >
+    <svg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' fill='#282828' {...props}>
       <g clipPath='url(#clip0_4119_3177)'>
         <path d='M10 8H16V9.33333H10V8Z' />
         <path d='M10 10.666H16V11.9993H10V10.666Z' />

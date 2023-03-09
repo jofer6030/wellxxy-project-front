@@ -1,7 +1,7 @@
 import { Box, Button, Grid, Paper, Typography } from '@mui/material';
 
-import product from '../assets/images/product_01.png';
-import OrdersEmpty from '../components/generals/OrdersEmpty';
+import product from '../../assets/images/product_01.png';
+import OrdersEmpty from './OrdersEmpty';
 const HomePage = () => {
   return (
     <Box className='home__page'>
@@ -17,14 +17,12 @@ const HomePage = () => {
           <Paper className='oders_bottom-cards'>
             <Typography variant='h3'>Nuestros productos</Typography>
             <Grid container className='card-product' columnSpacing={4}>
-              <Grid item xs={5} sx={{ maxWidth: '268px', width: '100%' }}>
+              <Grid item xs={5}>
                 <img src={product} alt='KIT VPH' />
               </Grid>
               <Grid item xs={7} className='card-product-info'>
                 <Typography variant='h4'>KIT VPH</Typography>
-                <Typography className='product__desc'>
-                  Precio de delivery desde 5 soles adicionales.
-                </Typography>
+                <Typography className='product__desc'>Precio de delivery desde 5 soles adicionales.</Typography>
                 <Typography className='product__price'>S/169</Typography>
                 <Button variant='contained-secondary' className='product__btn'>
                   Lo quiero

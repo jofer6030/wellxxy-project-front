@@ -1,16 +1,17 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { sleep } from '../../helpers/sleep';
 
+type Token = string | null;
+
 export interface IUser {
   name: string;
   picture?: string;
   email: string;
 }
-type Token = string | null | undefined;
 
 interface AuthState {
   token: Token;
-  user?: IUser;
+  user: IUser | null;
   isLoading: boolean;
   auth: boolean;
 }
@@ -19,24 +20,24 @@ const initialState: AuthState = {
   token: localStorage.getItem('token'),
   isLoading: true,
   auth: false,
+  user: null,
 };
 
-export const checkingAuthAction = createAsyncThunk(
-  'AUTH/checkingAuth',
-  async (token: Token) => {
-    // TODO: fetch post auth
-    await sleep(1);
-    if (!token) {
-      throw new Error();
-    } else {
-      const data = {
-        token: Math.random().toString(36).slice(2),
-        user: { name: 'Jose Fernando', email: 'jose@correo.com' },
-      };
-      return data;
-    }
+console.log(localStorage.getItem('token'));
+
+export const checkingAuthAction = createAsyncThunk('AUTH/checkingAuth', async (token: Token) => {
+  // TODO: fetch post auth
+  await sleep(1);
+  if (!token) {
+    throw new Error();
+  } else {
+    const data = {
+      token: Math.random().toString(36).slice(2),
+      user: { name: 'Jose Fernando', email: 'jose@correo.com' },
+    };
+    return data;
   }
-);
+});
 
 export const loginAction = createAsyncThunk('AUTH/login', async () => {
   await sleep(1);
@@ -52,8 +53,8 @@ export const authSlice = createSlice({
   initialState,
   reducers: {
     logout: (state) => {
-      state.token = undefined;
-      state.user = undefined;
+      state.token = null;
+      state.user = null;
       state.auth = false;
       localStorage.clear();
     },
@@ -64,8 +65,8 @@ export const authSlice = createSlice({
     });
     builder.addCase(checkingAuthAction.fulfilled, (state, action) => {
       state.isLoading = false;
-      state.user = action.payload?.user;
-      state.token = action.payload?.token;
+      state.user = action.payload.user;
+      state.token = action.payload.token;
       state.auth = true;
       localStorage.setItem('token', state.token);
     });
@@ -78,8 +79,8 @@ export const authSlice = createSlice({
     });
     builder.addCase(loginAction.fulfilled, (state, action) => {
       state.isLoading = false;
-      state.user = action.payload?.user;
-      state.token = action.payload?.token;
+      state.user = action.payload.user;
+      state.token = action.payload.token;
       state.auth = true;
       localStorage.setItem('token', state.token);
     });

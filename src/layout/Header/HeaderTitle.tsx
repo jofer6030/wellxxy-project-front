@@ -6,7 +6,7 @@ import { useAppDispatch, useAppSelector } from '../../redux/hooks/reduxHooks';
 import { logout } from '../../redux/reducers/authReducer';
 import { backStep } from '../../redux/reducers/stepReducer';
 
-import CloseIcon from '../Icons/CloseIcon';
+import CloseIcon from '../../components/Icons/CloseIcon';
 
 const HeaderTitle: FC<{ title: string }> = ({ title }) => {
   const { steps } = useAppSelector((state) => state.Steps);

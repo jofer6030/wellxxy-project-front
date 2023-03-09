@@ -1,13 +1,7 @@
 import { SVGProps } from 'react';
 
 const FlagPeruIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg
-    xmlns='http://www.w3.org/2000/svg'
-    viewBox='0 0 500 500'
-    xmlSpace='preserve'
-    {...props}
-    width={24}
-  >
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500' xmlSpace='preserve' {...props} width={24}>
     <path
       style={{
         fill: '#d91023',

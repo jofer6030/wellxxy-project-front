@@ -21,13 +21,13 @@ export const stepSlice = createSlice({
       state.steps = state.steps - 1;
       localStorage.setItem('step', state.steps.toString());
     },
-    resetStep: (state) => {
+    intialStep: (state) => {
       state.steps = 1;
       localStorage.setItem('step', state.steps.toString());
     },
   },
 });
 
-export const { nextStep, resetStep, backStep } = stepSlice.actions;
+export const { nextStep, intialStep, backStep } = stepSlice.actions;
 
 export default stepSlice.reducer;

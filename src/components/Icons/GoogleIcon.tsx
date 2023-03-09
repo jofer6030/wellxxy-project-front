@@ -1,7 +1,9 @@
-const GoogleIcon = ({ className = '' }) => {
+import { SVGProps } from 'react';
+
+const GoogleIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
-    <div className={className}>
-      <svg viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <div>
+      <svg {...props} viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <g clipPath='url(#clip0_4119_843)'>
           <path
             d='M26.8691 14.2524C26.8691 13.1463 26.7793 12.3391 26.5851 11.502H13.9536V16.4947H21.368C21.2186 17.7355 20.4114 19.604 18.6175 20.8596L18.5924 21.0268L22.5862 24.1207L22.8629 24.1484C25.4041 21.8014 26.8691 18.3483 26.8691 14.2524Z'
@@ -22,12 +24,7 @@ const GoogleIcon = ({ className = '' }) => {
         </g>
         <defs>
           <clipPath id='clip0_4119_843'>
-            <rect
-              width='27'
-              height='27'
-              fill='white'
-              transform='translate(0.5 0.5)'
-            />
+            <rect width='27' height='27' fill='white' transform='translate(0.5 0.5)' />
           </clipPath>
         </defs>
       </svg>

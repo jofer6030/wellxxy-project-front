@@ -9,6 +9,11 @@ export const btnContainedPrimary = {
     color: '#fff',
     border: 'none',
   },
+  ':disabled': {
+    color: '#fff',
+    cursor: 'not-allowed',
+    pointerEvents: 'all',
+  },
 };
 export const btnContainedSecondary = {
   backgroundColor: '#282828',
@@ -22,6 +27,11 @@ export const btnContainedSecondary = {
     color: '#fff',
     border: 'none',
   },
+  ':disabled': {
+    color: '#fff',
+    cursor: 'not-allowed',
+    pointerEvents: 'all',
+  },
 };
 
 export const btnOutlined = {
@@ -32,6 +42,11 @@ export const btnOutlined = {
   ':hover': {
     border: '1px solid #5d5d5d',
     backgroundColor: '#e9eff6',
+  },
+  ':disabled': {
+    color: 'rgba(40, 40, 40, 0.9)',
+    cursor: 'not-allowed',
+    pointerEvents: 'all',
   },
 };
 

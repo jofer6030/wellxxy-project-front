@@ -60,10 +60,7 @@ const Countries = () => {
       placeholder=''
       formatOptionLabel={(country) => (
         <div className='country-option'>
-          <img
-            src={`https://flagcdn.com/16x12/${country.code}.png`}
-            alt='country-image'
-          />
+          <img src={`https://flagcdn.com/16x12/${country.code}.png`} alt='country' />
           <span> {country.label}</span>
         </div>
       )}
